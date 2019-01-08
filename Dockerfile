@@ -9,7 +9,7 @@ LABEL "repository"="https://github.com/re-actors/dpl-action"
 LABEL "homepage"="https://github.com/re-actors"
 LABEL "maintainer"="Sviatoslav Sydorenko <wk+re-actors@sydorenko.org.ua>"
 
-RUN gem install rdoc --no-document dpl
+RUN apk add git && gem install rdoc --no-document dpl
 
 ENTRYPOINT ["dpl"]
 CMD []
